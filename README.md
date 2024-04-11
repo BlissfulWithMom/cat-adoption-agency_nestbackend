@@ -38,3 +38,10 @@ $ npm run test:cov
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+
+# New modules
+npm install @nestjs/typeorm typeorm pg
+npm install @nestjs/passport passport passport-jwt @nestjs/jwt
+npm install bcrypt
+npm install class-validator class-transformer
