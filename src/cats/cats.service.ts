@@ -22,10 +22,10 @@ export class CatsService {
   //   return this.catRepository.findOne(id);
   // }
 
-  // async update(id: number, cat: Cat): Promise<Cat> {
-  //   await this.catRepository.update(id, cat);
-  //   return this.catRepository.findOne(id);
-  // }
+  async update(id: number, cat: Cat): Promise<Cat> {
+    await this.catRepository.update(id, cat);
+    return this.catRepository.findOne(id);
+  }
 
   async remove(id: number): Promise<void> {
     await this.catRepository.delete(id);
