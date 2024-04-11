@@ -21,15 +21,15 @@ import { CatsService } from './cats/cats.service';
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'nest',
-      password: 'nest',
+      username: 'postgres',
+      password: "postgres",
       database: 'nest',
       entities: [User, Cat],
       synchronize: true,
     }),
     TypeOrmModule.forFeature([User, Cat]),
     JwtModule.register({
-      secret: 'your_secret_key', // Replace with your actual secret key
+      secret: 'secret_key', // Replace with your actual secret key
       signOptions: { expiresIn: '1h' },
     }),
     PassportModule,
