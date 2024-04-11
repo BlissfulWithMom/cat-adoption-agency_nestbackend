@@ -3,7 +3,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 import { UserService } from '../user/user.service';
 import { LoginDto } from './dto/login.dto';
-import { Roles } from './roles.decorator';
+// import { Roles } from './roles.decorator';
 import { RolesGuard } from './roles.guard';
 
 @Controller('auth')
@@ -29,7 +29,7 @@ export class AuthController {
 
   @Get('profile')
   @UseGuards(AuthGuard('jwt'), RolesGuard) // Apply both AuthGuard and RolesGuard
-  @Roles('admin') // Specify the required role for accessing the endpoint
+  // @Roles('admin') // Specify the required role for accessing the endpoint
   getProfile(@Request() req) {
     return req.user;
   }
